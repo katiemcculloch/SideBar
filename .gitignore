@@ -34,3 +34,6 @@ config.js
 .floobit
 .floo
 .flooignore
+
+#bundle
+app.js

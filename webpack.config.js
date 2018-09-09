@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   context: __dirname + '/client',
   entry: './index.js',
   module: {
@@ -11,7 +12,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader', 
         query: {
-          presets: ['react', 'es2015', 'env']
+          presets: ['react', 'es2015', 'env'],
+          plugins: [['styled-components'], ['babel-plugin-styled-components']]
         },
       },
       {
@@ -25,7 +27,22 @@ module.exports = {
           "css-loader", // translates CSS into CommonJS
           "sass-loader" // compiles Sass to CSS, using Node Sass by default
       ]
-    }]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: "babel-loader"
+          },
+          {
+            loader: "react-svg-loader",
+            options: {
+              jsx: true // true outputs JSX tags
+            }
+          }
+        ]
+      }
+    ]
   },
   output: {
     path: __dirname + '/public',

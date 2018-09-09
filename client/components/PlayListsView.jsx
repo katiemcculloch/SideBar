@@ -1,16 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'React';
 import axios from 'axios';
+import PlayListIcon from '../assets/playLists.jsx'
 
-import RelatedTrackEntry from './RelatedTrackEntry.jsx';
-
-import RelatedTracksIcon from '../assets/relatedTracks.jsx'
+import PlayListEntry from './PlayListEntry.jsx'
 
 const viewStyle = {
   header: {
     height: '31px',
     color: '#999',
     // display: 'inline',
-    fontFamily:  'Lucida Sans Unicode', 
+    fontFamily:  'Lucida Sans Unicode',
     fontSize: '14px',
     fontWeight: '100',
     headerText: {
@@ -31,39 +30,41 @@ const viewStyle = {
   }
 }
 
-class RelatedTracksView extends Component {
+class PlayListsView extends Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.state = {
+
+    }
+    //function bindings 
+
+  }
+  componentDidMount() {
+
   }
 
-  componentDidMount(){
-
-  }
-
-  render(){
+  render() {
     return (
       <div>
         <h3>
           <div style={viewStyle.header}>
             <span style={viewStyle.header.icon}>
-              <RelatedTracksIcon />
+              <PlayListIcon />
             </span>
             <div style={viewStyle.header.headerText}>
-              <span style={viewStyle.header.title}>Related Tracks</span>
+              <span style={viewStyle.header.title}>In Playlists</span>
               <span style ={viewStyle.header.viewAll}>View all</span>
             </div>
           </div>
         </h3>
         <div>
-          {/* Temporarily hard coded */}
-          <RelatedTrackEntry />
-          <RelatedTrackEntry />
-          <RelatedTrackEntry />
+          <PlayListEntry />
+          <PlayListEntry />
+          <PlayListEntry />
         </div>
       </div>
     )
   }
 }
 
-
-export default RelatedTracksView;
+export default PlayListsView;

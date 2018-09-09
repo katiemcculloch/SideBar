@@ -2,15 +2,16 @@ import React from 'react';
 
 // components:
 import RelatedTracksView from './RelatedTracksView.jsx';
+import PlayListsView from './PlayListsView.jsx'
 
 // components end //
 
 const divStyle = {
   sideBarMain: {
-    background: '#f2f2f2',
+    background: '#fff',
     width: '300px',
-    marginLeft: '3px',
-    marginRight: '3px',
+    marginLeft: '5px',
+    marginRight: '5px',
     
     // temporary //
     borderStyle: 'solid',
@@ -25,7 +26,6 @@ const divStyle = {
     fontVariantCaps: 'normal',
     fontVariantNumeric: 'normal',
     fontVariantEastAsian: 'normal',
-    fontWeight: 'normal',
     fontStretch: 'normal',
     fontSize: '12px',
     lineHeight: 1.4,
@@ -39,16 +39,16 @@ const divStyle = {
 
 
 const SideBar = props => {
+
   return (
     <div style={divStyle.sideBarMain}>
-    Hello from Sidebar!
       {/* Related Tracks component  */}
       <div id="RelatedTracksView" style={divStyle.eachComponent}>
         <RelatedTracksView />
       </div>
       {/* In PlayLists component  */}
-      <div id="InPlayListsView" style={divStyle.eachComponent}>
-        #PlayLists View
+      <div id="PlayListsView" style={divStyle.eachComponent}>
+        <PlayListsView />
       </div>
       {/* Users Liked component  */}
       <div id="LikesView" style={divStyle.eachComponent}>
