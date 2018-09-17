@@ -1,4 +1,5 @@
 import React from 'react';
+import EntryPic from '../styles/entries/EntryPic';
 
 const playListEntryStyle = {
   main: {
@@ -24,7 +25,9 @@ const playListEntryStyle = {
 const PlayListEntry = props => {
   return (
     <div style={playListEntryStyle.main}>
-      <div><span style={playListEntryStyle.imagePreview}></span></div>
+      <EntryPic>
+        <img height={50} width={50} src="https://orig00.deviantart.net/75b5/f/2018/208/a/d/maki_ligon_ddlc_album_art_by_scoobymcsnack-dcig2o1.jpg" alt=""/>
+      </EntryPic>    
     </div>
   )
 }

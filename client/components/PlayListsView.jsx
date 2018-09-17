@@ -1,34 +1,14 @@
 import React, { Component } from 'React';
 import axios from 'axios';
-import PlayListIcon from '../assets/playLists.jsx'
 
-import PlayListEntry from './PlayListEntry.jsx'
+//styled-components//
+import HeaderText from '../styles/HeaderText';
+import HeaderIcon from '../styles/HeaderIcon';
+import ViewAllText from '../styles/ViewAllText';
 
-const viewStyle = {
-  header: {
-    height: '31px',
-    color: '#999',
-    // display: 'inline',
-    fontFamily:  'Lucida Sans Unicode',
-    fontSize: '14px',
-    fontWeight: '100',
-    headerText: {
-      // marginTop: '4px',
-      // marginBottom: '-10px'
-    },
-    title: {
-      // marginBottom: '-10px'
-    },
-    viewAll: {
-      float: 'right'
-    },
-    icon: {
-      float: 'left',
-      width: '20.99px',
-      margin: '4px'
-    }
-  }
-}
+//SVG->JSX Components
+import PlayListIcon from '../assets/playLists.jsx';
+import PlayListEntry from './PlayListEntry.jsx';
 
 class PlayListsView extends Component {
   constructor(props){
@@ -47,15 +27,15 @@ class PlayListsView extends Component {
     return (
       <div>
         <h3>
-          <div style={viewStyle.header}>
-            <span style={viewStyle.header.icon}>
+          <HeaderText>
+            <HeaderIcon>
               <PlayListIcon />
-            </span>
-            <div style={viewStyle.header.headerText}>
-              <span style={viewStyle.header.title}>In Playlists</span>
-              <span style ={viewStyle.header.viewAll}>View all</span>
+            </HeaderIcon>
+            <div className="headerText">
+              <span>In Playlists</span>
+              <ViewAllText>View all</ViewAllText>
             </div>
-          </div>
+          </HeaderText>
         </h3>
         <div>
           <PlayListEntry />
