@@ -6,6 +6,7 @@ const PORT = 9002;
 
 const db = require('../database')
 const router = require('./router.js')
+const models = require('./models.js')
 
 const app = express();
 
