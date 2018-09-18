@@ -19,7 +19,7 @@ export default styled.div`
   line-height: 1.4;
 
   /* temporary  */
-  border-style: solid;
+  /* border-style: solid;
   border-width: 2px;
-  border-color: #333;
+  border-color: #333; */
 `;
