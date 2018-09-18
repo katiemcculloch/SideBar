@@ -11,4 +11,7 @@ export default styled.li`
   list-style-type: none;
   margin: -15px;
   padding: 2px;
+  border-width: 1.5px;
+  border-color: #fff;
+  
 `

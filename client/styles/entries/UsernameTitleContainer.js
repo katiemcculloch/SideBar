@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  display: block;
-  float: left;
+  display: inline-block;
   min-height: 60px;
-  position: relative;
+  position: absolute;
   flex: 1;
   overflow-wrap: break-word;
   word-wrap: break-word;

@@ -12,7 +12,12 @@ import RelatedTracksIcon from '../assets/relatedTracks.jsx'
 
 class RelatedTracksView extends Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.state ={
+
+    }
+    //function bindings
+
   }
 
   componentDidMount(){
@@ -27,7 +32,7 @@ class RelatedTracksView extends Component {
             <HeaderIcon>
               <RelatedTracksIcon />
             </HeaderIcon>
-            <div className="headerText">
+            <div className="headerText" style={{paddingTop: '6px'}}>
               <span>Related Tracks</span>
               <ViewAllText>View all</ViewAllText>
             </div>

@@ -3,7 +3,9 @@ import UserCircle from '../styles/entries/UserCircle'
 
 const styles = {
   image: {
-    borderRadius: '50%'
+    borderRadius: '50%',
+    borderWidth: '1.5px',
+    borderColor: '#fff'
   },
   listItem: {
     display: 'inline'
@@ -14,8 +16,9 @@ const styles = {
     overflowY: 'hidden',
     display: 'inline',
     listStyleType: 'none',
-    margin: '-15px',
+    margin: '-6px',
     padding: '2px',
+    
   }
 }
 

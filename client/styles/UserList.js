@@ -6,5 +6,6 @@ export default styled.ul`
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-left: 5px;
   white-space: nowrap;
 `

@@ -9,6 +9,7 @@ import HeaderText from '../styles/HeaderText';
 import RelatedTracksView from './RelatedTracksView.jsx';
 import PlayListsView from './PlayListsView.jsx'
 import LikesView from './LikesView.jsx'
+import RepostsView from './RepostsView.jsx'
 
 
 const divStyle = {
@@ -38,7 +39,7 @@ const SideBar = props => {
         </div>
         {/* Users Reposted component  */}
         <div id="RepostsView" style={divStyle.eachComponent}>
-          #Reposts View
+          <RepostsView/>
         </div>
       </Wrapper>
 

@@ -1,34 +1,31 @@
 import React from 'react';
+import SoundStatsView from './miniComponents/SoundStatsView.jsx';
+
 import EntryPic from '../styles/entries/EntryPic';
+import EntryDiv from '../styles/entries/EntryDiv';
+import UsernameTitleContainer from '../styles/entries/UsernameTitleContainer';
+import UsernameText from '../styles/entries/UsernameText';
+import SoundTitle from '../styles/entries/SoundTitle';
 
-const playListEntryStyle = {
-  main: {
-    width: '306px',
-    height: '72.19px',
-    marginLeft: '-5px',
-
-    //temporary
-    borderStyle: 'solid',
-    borderWidth: '2px',
-    borderColor: 'orange',
-  },
-  imagePreview: {
-    height: '50px',
-    width: '50px',
-    background: 'black',
-    float: 'left',
-    padding: '6px, 5px',
-
-  }
-}
 
 const PlayListEntry = props => {
   return (
-    <div style={playListEntryStyle.main}>
-      <EntryPic>
-        <img height={50} width={50} src="https://orig00.deviantart.net/75b5/f/2018/208/a/d/maki_ligon_ddlc_album_art_by_scoobymcsnack-dcig2o1.jpg" alt=""/>
-      </EntryPic>    
-    </div>
+    <EntryDiv>
+
+        <EntryPic>
+          <img height={50} width={50} src="https://orig00.deviantart.net/75b5/f/2018/208/a/d/maki_ligon_ddlc_album_art_by_scoobymcsnack-dcig2o1.jpg" alt=""/>
+        </EntryPic>
+
+        <div style={{float:'left'}}>
+        <UsernameTitleContainer style={{float:top}}>
+          <UsernameText><span>Username</span></UsernameText> 
+          <SoundTitle><span>Playlist Name</span></SoundTitle>
+            <SoundStatsView />
+        </UsernameTitleContainer>
+        </div>
+
+
+    </EntryDiv>
   )
 }
 

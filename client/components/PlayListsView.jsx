@@ -38,6 +38,7 @@ class PlayListsView extends Component {
           </HeaderText>
         </h3>
         <div>
+          {/* Temporarily Hard Coded */}
           <PlayListEntry />
           <PlayListEntry />
           <PlayListEntry />

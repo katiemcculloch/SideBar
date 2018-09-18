@@ -26,7 +26,7 @@ const SoundStatsView = props => {
       {/* Likes */}
       <MiniStats>
         <StatIcon>
-          {/* <LikeIcon /> */}
+          <LikeIcon />
         </StatIcon>
         <span className="temp">
           6.9K

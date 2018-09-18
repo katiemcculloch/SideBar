@@ -24,8 +24,6 @@ const RelatedTrackEntry = props => {
           <SoundTitle><span>Related Song</span></SoundTitle>
             <SoundStatsView />
         </UsernameTitleContainer>
-          {/* <div style={{display:'block'}}>
-          </div> */}
         </div>
 
 
