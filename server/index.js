@@ -4,9 +4,11 @@ const morgan = require('morgan');
 const path = require ('path');
 const PORT = 9002;
 
+// >>populate database<< //
+// const helper = require('../database/helper.js');
+
 const db = require('../database')
-const router = require('./router.js')
-const models = require('./models.js')
+// const router = require('./router.js')
 
 const app = express();
 
@@ -17,7 +19,7 @@ app.use(parser.urlencoded({
   extended : true
 }))
 
-app.use('/api', router);
+// app.use('/api', router);
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
