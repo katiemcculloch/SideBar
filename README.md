@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Stark-24/HeroPlayer
+  - https://github.com/Stark-24/SideBar
+  - https://github.com/Stark-24/CommentSection
+  - https://github.com/Stark-24/FooterPlayer
 
 ## Table of Contents
 
