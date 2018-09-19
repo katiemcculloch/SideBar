@@ -1,16 +1,16 @@
-const commentsData = require('../data/CommentsMockData.json');
-const usersData = require('../data/UsersMockData.json');
-const playlistsData = require('../data/PlaylistsMockData.json');
-const songsData = require('../data/SongsMockData.json');
+// const commentsData = require('../data/CommentsMockData.json');
+// const usersData = require('../data/UsersMockData.json');
+// const playlistsData = require('../data/PlaylistsMockData.json');
+// const songsData = require('../data/Son gsMockData.json');
 
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 
-const { 
-  Comments,
-  Users,
-  Song,
-  Playlist 
-} = require('./models.js');
+// const {  
+//   Comments,
+//   Users,
+  // Song, 
+  // Playlist 
+// } = require('./models.js');  
 
 // const insertComments = (commentsData) => {
 //   commentsData.forEach(commentData => {
@@ -56,7 +56,7 @@ const {
 //     let counter = 0;
 //     Playlist.create({
 //       id: playlistData.id,
-//       username: playlistData.user,
+//       user: playlistData.user,
 //       title: playlistData.title,
 //       cover_art: playlistData.cover_art,
 //       likes: playlistData.likes,
@@ -77,6 +77,7 @@ const {
 //     let counter = 0;
 //     Song.create({
 //       id: songData.id,
+//       title: songData.title,
 //       artist: songData.artist,
 //       media: songData.media,
 //       album_art: songData.album_art,
@@ -88,7 +89,7 @@ const {
 //     })
 //     .then(song => {
 //       counter++;
-//       console.log("Mock comments loaded to DB", counter, plsongaylist.dataValues);
+//       console.log("Mock comments loaded to DB", counter, songs.dataValues);
 //     })
 //     .catch(err => {
 //       console.log("err loading comments to DB", err);
@@ -99,4 +100,4 @@ const {
 // insertComments(commentsData);
 // insertUsers(usersData);
 // insertPlaylists(playlistsData);
-// insertSongs(songsData);
+// insertSongs(songsData);            

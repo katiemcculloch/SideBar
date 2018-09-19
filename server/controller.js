@@ -1,3 +1,5 @@
+const Sequelize = require('sequelize');
+
 const {
   Comments,
   Users,
@@ -11,9 +13,13 @@ module.exports = {
       console.log('songs get');
       const { tags } = req.query;
       Song.findAll({
-        where: {
-          tags: tags
-        }
+        // where: {
+        //   tags: tags
+        // },
+        order: [
+          [Sequelize.fn('RANDOM')]
+        ],
+        limit: 3
       })
       .then(tracks => {
         if (tracks) {
@@ -31,8 +37,9 @@ module.exports = {
       // implement checking which playlists they're in
       Playlist.findAll({
         order: [
-          [sequelize.fn('RAND', '')]
-        ]
+          [Sequelize.fn('RANDOM')]
+        ],
+        limit: 3
       })
       .then(lists => {
         if (lists) {
@@ -49,8 +56,9 @@ module.exports = {
       console.log('users who liked get');
       Users.findAll({
         order: [
-          [sequelize.fn('RAND', '')]
-        ]
+          [Sequelize.fn('RANDOM')]
+        ],
+        limit: 10
       })
       .then(users => {
         if (users) {
@@ -67,8 +75,9 @@ module.exports = {
       console.log('users who reposted get');
       Users.findAll({
         order: [
-          [sequelize.fn('RAND', '')]
-        ]
+          [Sequelize.fn('RANDOM')]
+        ],  
+        limit: 10
       })
       .then(users => {
         if (users) {

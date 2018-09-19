@@ -15,6 +15,6 @@ router
 
 router
   .route('/usersReposts')
-  .get(controller.relatedTracks.get)
+  .get(controller.usersReposts.get)
 
 module.exports = router;

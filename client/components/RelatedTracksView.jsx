@@ -14,14 +14,28 @@ class RelatedTracksView extends Component {
   constructor(props){
     super(props);
     this.state ={
-
+      tracks: [],
     }
     //function bindings
 
   }
 
   componentDidMount(){
+    this.getSongs();
+  }
 
+  getSongs() {
+    axios
+      .get('/api/relatedTracks', {
+        // params: { tags: this.state.songTag}
+      })
+      .then( ({data}) => {
+        console.log(data)
+        this.setState({
+          tracks: data
+        }), ()=> console.log('related tracks: ', this.state.tracks)
+      })
+      .catch( err => console.log('error getting relatedTracks...', err))
   }
 
   render() {
@@ -39,10 +53,10 @@ class RelatedTracksView extends Component {
           </HeaderText>
         </h3>
         <div>
-          {/* Temporarily hard coded */}
-          <RelatedTrackEntry />
-          <RelatedTrackEntry />
-          <RelatedTrackEntry />
+          {/* {this.state.tracks.map((track, index) => {
+
+          })} */}
+
         </div>
       </div>
     )

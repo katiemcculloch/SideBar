@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+
 import UserEntry from './UserEntry.jsx';
 
 //styled-components//
@@ -23,6 +24,8 @@ class LikesView extends Component {
   componentDidMount() {
 
   }
+
+
 
   render() {
     return (
