@@ -14,7 +14,7 @@ class RelatedTracksView extends Component {
   constructor(props){
     super(props);
     this.state ={
-      tracks: [],
+      tracks: [1,2,3],
     }
     //function bindings
 
@@ -53,10 +53,12 @@ class RelatedTracksView extends Component {
           </HeaderText>
         </h3>
         <div>
-          {/* {this.state.tracks.map((track, index) => {
-
-          })} */}
-
+          {this.state.tracks.map((track, index) => {
+            return <RelatedTrackEntry
+              key={index}
+              track={track}
+            />
+          })}
         </div>
       </div>
     )

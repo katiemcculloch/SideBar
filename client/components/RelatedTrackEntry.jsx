@@ -15,13 +15,13 @@ const RelatedTrackEntry = props => {
     <EntryDiv>
 
         <EntryPic>
-          <img height={50} width={50} src="https://i1.sndcdn.com/artworks-000303488604-edgrbo-t500x500.jpg" alt=""/>
+          <img height={50} width={50} src={props.track.album_art} alt={props.track.title}/>
         </EntryPic>
 
         <div style={{float:'left'}}>
         <UsernameTitleContainer style={{float:top}}>
-          <UsernameText><span>Username</span></UsernameText> 
-          <SoundTitle><span>Related Song</span></SoundTitle>
+          <UsernameText><span>{props.track.artist}</span></UsernameText> 
+          <SoundTitle><span>{props.track.title}</span></SoundTitle>
             <SoundStatsView />
         </UsernameTitleContainer>
         </div>
