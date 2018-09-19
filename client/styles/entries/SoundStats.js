@@ -10,7 +10,7 @@ export default styled.div`
   margin-left: -7px;
   padding: 0;
   font-size: 11px;
-  /* white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden; */
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: hidden;
 `;

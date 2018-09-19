@@ -2,8 +2,7 @@ import React from 'react';
 
 const styles = {
   cls1: {
-    fill: '#999',
-    width: '12px',
+    fill: '#999'
   }
 }
 

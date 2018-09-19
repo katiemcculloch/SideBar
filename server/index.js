@@ -2,6 +2,7 @@ const express = require('express');
 const parser = require('body-parser');
 const morgan = require('morgan');
 const path = require ('path');
+const cors = require('cors');
 const PORT = 9002;
 
 // >>populate database<< //
@@ -14,6 +15,7 @@ const app = express();
 
 app.use(morgan('dev'))
 
+app.use(cors());
 app.use(parser.json());
 app.use(parser.urlencoded({
   extended : true

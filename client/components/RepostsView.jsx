@@ -7,7 +7,9 @@ import HeaderText from '../styles/HeaderText';
 import HeaderIcon from '../styles/HeaderIcon';
 import ViewAllText from '../styles/ViewAllText';
 import UserList from '../styles/UserList';
-import UserCircle from '../styles/entries/UserCircle';
+
+//SVG-->JSX
+import RepostsIcon from '../assets/repostsHeaderIcon.jsx'
 
 class RepostsView extends Component {
   constructor(props){
@@ -27,10 +29,12 @@ class RepostsView extends Component {
         <h3>
         <HeaderText>
           <HeaderIcon>
-            
+            <RepostsIcon />
           </HeaderIcon>
-          <div className="headerText">
-            <span>Reposts</span>
+          <div className="headerText" style={{paddingTop:'3px'}}>
+            <span>
+            {(Math.floor(Math.random() * (10 + 999)) - 10) + ' Reposts' }
+            </span>
             <ViewAllText>View all</ViewAllText>
           </div>
         </HeaderText>

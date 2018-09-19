@@ -7,7 +7,10 @@ import HeaderText from '../styles/HeaderText';
 import HeaderIcon from '../styles/HeaderIcon';
 import ViewAllText from '../styles/ViewAllText';
 import UserList from '../styles/UserList';
-import UserCircle from '../styles/entries/UserCircle';
+
+//SVG-->JSX
+import AlbumFrame from '../assets/albumFrame.jsx';
+import LikesIcon from '../assets/likesHeaderIcon.jsx';
 
 class LikesView extends Component {
   constructor(props){
@@ -27,10 +30,12 @@ class LikesView extends Component {
         <h3>
         <HeaderText>
           <HeaderIcon>
-            
+            <LikesIcon />
           </HeaderIcon>
-          <div className="headerText">
-            <span>Likes</span>
+          <div className="headerText" style={{paddingTop:'5px'}}>
+            <span>
+            {(Math.floor(Math.random() * (10 + 999)) - 10) + ' Likes' }
+            </span>
             <ViewAllText>View all</ViewAllText>
           </div>
         </HeaderText>
