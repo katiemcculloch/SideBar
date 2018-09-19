@@ -31,7 +31,7 @@ class PlayListsView extends Component {
             <HeaderIcon>
               <PlayListIcon />
             </HeaderIcon>
-            <div className="headerText">
+            <div className="headerText" style={{paddingTop:'5px'}}>
               <span>In Playlists</span>
               <ViewAllText>View all</ViewAllText>
             </div>

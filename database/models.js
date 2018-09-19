@@ -90,7 +90,7 @@ const Song = connection.define(
 );
 
 
-const Playlist = sequelize.define('playlist', 
+const Playlist = connection.define('playlist', 
   {
     id: {
       type: Sequelize.INTEGER,

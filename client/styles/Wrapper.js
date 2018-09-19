@@ -8,7 +8,7 @@ export default styled.div`
 
   /* Fonts */
   color: #333333;
-  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans";
   font-style: 'normal';
   font-variant-ligatures: normal;
   font-variant-caps: normal;

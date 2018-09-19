@@ -2,7 +2,7 @@
   "name": "sidebatnavbar",
   "version": "0.0.1",
   "description": "Side bar and Nav bar for Stark Cloud",
-  "main": "app.js",
+  "main": "server/index.js",
   "author": "Stark-24",
   "license": "ISC",
   "engines": {
