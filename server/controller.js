@@ -58,7 +58,7 @@ module.exports = {
         order: [
           [Sequelize.fn('RANDOM')]
         ],
-        limit: 10
+        limit: 9
       })
       .then(users => {
         if (users) {
@@ -77,7 +77,7 @@ module.exports = {
         order: [
           [Sequelize.fn('RANDOM')]
         ],  
-        limit: 10
+        limit: 9
       })
       .then(users => {
         if (users) {
