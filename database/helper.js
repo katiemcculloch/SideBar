@@ -1,7 +1,7 @@
 // const commentsData = require('../data/CommentsMockData.json');
 // const usersData = require('../data/UsersMockData.json');
 // const playlistsData = require('../data/PlaylistsMockData.json');
-// const songsData = require('../data/Son gsMockData.json');
+// const songsData = require('../data/SongsMockData.json');
 
 // const Sequelize = require('sequelize');
 
@@ -43,7 +43,7 @@
 //     })
 //       .then(user => {
 //         counter++;
-//         console.log("Mock comments loaded to DB", counter, user.dataValues);
+//         console.log("Mock users loaded to DB", counter, user.dataValues);
 //       })
 //       .catch(err => {
 //         console.log("err loading comments to DB", err);
@@ -64,7 +64,7 @@
 //     })
 //     .then(playlist => {
 //       counter++;
-//       console.log("Mock comments loaded to DB", counter, playlist.dataValues);
+//       console.log("Mock playlists loaded to DB", counter, playlist.dataValues);
 //     })
 //     .catch(err => {
 //       console.log("err loading comments to DB", err);
@@ -89,7 +89,7 @@
 //     })
 //     .then(song => {
 //       counter++;
-//       console.log("Mock comments loaded to DB", counter, songs.dataValues);
+//       console.log("Mock songs to DB", counter, songs.dataValues);
 //     })
 //     .catch(err => {
 //       console.log("err loading comments to DB", err);

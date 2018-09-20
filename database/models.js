@@ -118,7 +118,7 @@ const Playlist = connection.define('playlist',
 Users.hasMany(Comments);
 Comments.belongsTo(Users);
 
-// connection.sync({ force: false }); //remove force: false after initial schema is finalized
+connection.sync({ force: false }); //remove force: false after initial schema is finalized
 
 module.exports = {
   Comments,
