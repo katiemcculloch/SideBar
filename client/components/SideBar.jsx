@@ -10,6 +10,7 @@ import RelatedTracksView from './RelatedTracksView.jsx';
 import PlayListsView from './PlayListsView.jsx'
 import LikesView from './LikesView.jsx'
 import RepostsView from './RepostsView.jsx'
+import GoMobile from './GoMobile.jsx'
 
 
 const divStyle = {
@@ -40,6 +41,10 @@ const SideBar = props => {
         {/* Users Reposted component  */}
         <div id="RepostsView" style={divStyle.eachComponent}>
           <RepostsView/>
+        </div>
+        {/* Go Mobile: */}
+        <div id="GoMobile" style={divStyle.eachComponent}>
+          <GoMobile />
         </div>
       </Wrapper>
 
