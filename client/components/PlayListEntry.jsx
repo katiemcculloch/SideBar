@@ -14,8 +14,14 @@ const PlayListEntry = props => {
   return (
     <EntryDiv>
 
-        <FrameDiv>
-          <PlaylistFrame />
+        <FrameDiv
+          width={60}
+          height={60}
+        >
+          <PlaylistFrame 
+            width={60}
+            height={60}
+          />
         </FrameDiv>
         <EntryPic style={{
           position:'absolute',
@@ -41,10 +47,10 @@ const PlayListEntry = props => {
         {console.log(props.playlist.cover_art)}
           <UsernameText><span>{props.playlist.user}</span></UsernameText> 
           <SoundTitle><span>{props.playlist.title}</span></SoundTitle>
-            <SoundStatsView 
+            {/* <SoundStatsView 
             likes={props.playlist.likes}
             reposts={props.playlist.reposts} 
-            />
+            /> */}
         </UsernameTitleContainer>
         </div>
 

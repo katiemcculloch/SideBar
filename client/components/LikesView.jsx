@@ -12,7 +12,6 @@ import ViewAllText from '../styles/ViewAllText';
 import UserList from '../styles/UserList';
 
 //SVG-->JSX
-import AlbumFrame from '../assets/albumFrame.jsx';
 import LikesIcon from '../assets/likesHeaderIcon.jsx';
 
 class LikesView extends Component {

@@ -20,10 +20,14 @@ const styles = {
   cls4: {
     fill: 'none'
   },
+  size: {
+    width:'60px',
+    // height:'60px',
+  }
 }
 
 export default () => 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.845 115.846">
+<svg xmlns="http://www.w3.org/2000/svg" style={styles.size} viewBox="0 0 115.845 115.846">
   <g id="Symbol_3_1" data-name="Symbol 3 – 1" transform="translate(-19.314 -3.314)">
     <g id="Rectangle_192" data-name="Rectangle 192" style={styles.cls1} transform="matrix(0.174, 0.985, -0.985, 0.174, 117.795, 3.315)">
       <rect  width="100" style={styles.cls3} height="100"/>

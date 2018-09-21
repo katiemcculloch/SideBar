@@ -22,7 +22,7 @@ const RelatedTrackEntry = props => {
         <UsernameTitleContainer style={{float:top}}>
           <UsernameText><span>{props.track.artist}</span></UsernameText> 
           <SoundTitle><span>{props.track.title}</span></SoundTitle>
-            <SoundStatsView />
+            {/* <SoundStatsView /> */}
         </UsernameTitleContainer>
         </div>
 

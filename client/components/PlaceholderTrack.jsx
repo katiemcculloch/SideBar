@@ -11,9 +11,13 @@ import SoundTitle from '../styles/entries/SoundTitle';
 const PlaceHolderEntry = props => {
   return (
     <EntryDiv>
-
+s
         <EntryPic>
-          ...
+          <img 
+          src="https://loading.io/spinners/ellipsis/lg.discuss-ellipsis-preloader.gif" 
+          alt="loading"
+          width={50}
+          />
         </EntryPic>
 
         <div style={{float:'left'}}>

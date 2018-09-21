@@ -20,7 +20,6 @@ class GoMobile extends Component {
       <div>
         <h3>
         <HeaderText>
-
           <div className="headerText" style={{paddingTop:'5px'}}>
             <span>
               Go mobile
@@ -34,7 +33,8 @@ class GoMobile extends Component {
         <img 
         src="https://i.imgur.com/ztwmJxF.png" 
         alt="mango"
-        width={135}
+        width={120}
+        height={44}
         margin={5}
         style={styles}
         />
@@ -42,8 +42,8 @@ class GoMobile extends Component {
         <img 
         src="https://i.imgur.com/PSfNE3W.png" 
         alt="gogo"
-        width={135}
-        height={48.93}
+        width={120}
+        height={44}
         style={styles}
         />
       </div>
