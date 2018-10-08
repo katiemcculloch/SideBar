@@ -26,7 +26,7 @@ class RepostsView extends Component {
   }
 
   handleOnLoad(e) {
-    console.log(e.target);
+    // console.log(e.target);
   }
 
   componentDidMount() {
