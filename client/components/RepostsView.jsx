@@ -16,10 +16,10 @@ import RepostsIcon from "../assets/repostsHeaderIcon.jsx";
 class RepostsView extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loading: true,
-      users: [0, 1, 2, 3, 4, 5, 6, 7, 8]
-    };
+    // this.state = {
+    //   loading: true,
+    //   users: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    // };
     //function bindings
     this.handleOnLoad = this.handleOnLoad.bind(this);
     this.renderUsers = this.renderUsers.bind(this);
@@ -29,27 +29,8 @@ class RepostsView extends Component {
     // console.log(e.target);
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
-
-  getUsers() {
-    axios
-      .get("/api/users", {
-        // params: {}
-      })
-      .then(({ data }) => {
-        console.log(data);
-        this.setState({
-          users: data,
-          loading: false
-        });
-      })
-      .catch(err => console.log("there was an error getting users...", err));
-  }
-
   renderUsers() {
-    if (!!this.state.loading) {
+    if (this.props.usersLoading) {
       return (
         <UserList>
           <PlaceHolderUser />
@@ -66,7 +47,7 @@ class RepostsView extends Component {
     } else {
       return (
         <UserList>
-          {this.state.users.map(user => {
+          {this.props.users.map((user, key) => {
             return (
               <UserEntry user={user} key={user.id} load={this.handleOnLoad} />
             );
@@ -86,7 +67,7 @@ class RepostsView extends Component {
             </HeaderIcon>
             <div className="headerText" style={{ paddingTop: "3px" }}>
               <span>
-                {Math.floor(Math.random() * (10 + 999)) - 10 + " Reposts"}
+                {Math.floor(Math.random() * (10 + 999)) - 1 + " Reposts"}
               </span>
               <ViewAllText>View all</ViewAllText>
             </div>

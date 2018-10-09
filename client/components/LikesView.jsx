@@ -16,10 +16,10 @@ import LikesIcon from "../assets/likesHeaderIcon.jsx";
 class LikesView extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      loading: true,
-      users: [0, 1, 2, 3, 4, 5, 6, 7, 8]
-    };
+    // this.state = {
+    //   loading: true,
+    //   users: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    // };
     //function bindings
     this.handleOnLoad = this.handleOnLoad.bind(this);
     this.renderUsers = this.renderUsers.bind(this);
@@ -29,28 +29,28 @@ class LikesView extends Component {
     // console.log(e.target);
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
+  // componentDidMount() {
+  //   this.getUsers();
+  // }
 
-  getUsers() {
-    axios
-      .get("/api/users", {
-        // params: {}
-      })
-      .then(({ data }) => {
-        console.log(data);
-        this.setState({
-          users: data,
-          loading: false
-        }),
-          () => console.log("users: ", this.state.users);
-      })
-      .catch(err => console.log("error getting users...", err));
-  }
+  // getUsers() {
+  //   axios
+  //     .get("/api/users", {
+  //       // params: {}
+  //     })
+  //     .then(({ data }) => {
+  //       console.log(data);
+  //       this.setState({
+  //         users: data,
+  //         loading: false
+  //       }),
+  //         () => console.log("users: ", this.state.users);
+  //     })
+  //     .catch(err => console.log("error getting users...", err));
+  // }
 
   renderUsers() {
-    if (!!this.state.loading) {
+    if (this.props.usersLoading) {
       return (
         <UserList>
           <PlaceHolderUser />
@@ -67,7 +67,7 @@ class LikesView extends Component {
     } else {
       return (
         <UserList>
-          {this.state.users.map(user => {
+          {this.props.users.map((user, key) => {
             return (
               <UserEntry user={user} key={user.id} load={this.handleOnLoad} />
             );
@@ -87,7 +87,7 @@ class LikesView extends Component {
             </HeaderIcon>
             <div className="headerText" style={{ paddingTop: "5px" }}>
               <span>
-                {Math.floor(Math.random() * (10 + 999)) - 10 + " Likes"}
+                {Math.floor(Math.random() * (10 + 999)) - 1 + " Likes"}
               </span>
               <ViewAllText>View all</ViewAllText>
             </div>
