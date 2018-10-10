@@ -14,35 +14,13 @@ import PlaceHolderEntry from "./PlaceholderTrack.jsx";
 class RelatedTracksView extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      tracks: [1, 2, 3],
-      loading: true
-    };
+    this.state = {};
     //function bindings
     this.renderTracks = this.renderTracks.bind(this);
   }
 
-  componentDidMount() {
-    // this.getSongs();
-  }
-
-  // getSongs() {
-  //   axios
-  //     .get('/api/relatedTracks', {
-  //       // params: { tags: this.state.songTag}
-  //     })
-  //     .then( ({data}) => {
-  //       // console.log(data)
-  //       this.setState({
-  //         tracks: data,
-  //         loading: false
-  //       }), ()=> console.log('related tracks: ', this.state.tracks)
-  //     })
-  //     .catch( err => console.log('error getting relatedTracks...', err))
-  // }
-
   renderTracks() {
-    if (!!this.state.loading) {
+    if (this.props.tracksLoading) {
       return (
         <div>
           <PlaceHolderEntry />
@@ -53,7 +31,7 @@ class RelatedTracksView extends Component {
     } else {
       return (
         <div>
-          {this.state.tracks.map((track, index) => {
+          {this.props.tracks.map((track, index) => {
             return <RelatedTrackEntry key={index} track={track} />;
           })}
         </div>

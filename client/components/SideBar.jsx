@@ -28,39 +28,35 @@ class SideBar extends Component {
       users: [0, 1, 2, 3, 4, 5, 6, 7, 8],
       usersLoading: true,
       playlists: [],
-      playlistsLoading: true
+      playlistsLoading: true,
+      tracks: [1, 2, 3],
+      tracksLoading: true
     };
-    this.getUsers = this.getUsers.bind(this);
+    this.getSidebar = this.getSidebar.bind(this);
+    // this.getPlaylists = this.getPlaylists.bind(this);
+    // this.getSongs = this.getSongs.bind(this);
   }
 
   componentDidMount() {
-    this.getUsers();
+    this.getSidebar();
   }
-
-  getUsers() {
+  getSidebar() {
     axios
-      .get("/api/users")
-      .then(({ data }) => {
-        console.log(data, "data from getUsers");
+      .get("/api/sidebar")
+      .then(data => {
+        console.log(data.data, "data");
         this.setState({
-          users: data,
-          usersLoading: false
+          users: data.data["user"],
+          usersLoading: false,
+          playlists: data.data["playlists"],
+          playlistsLoading: false,
+          tracks: data.data["songs"],
+          tracksLoading: false
         });
-        axios
-          .get(`/api/users/${data[0].id}/playlists`, {
-            // params: {}
-          })
-          .then(({ data }) => {
-            // console.log(data)
-            this.setState({
-              playlists: data,
-              playlistsLoading: false
-            }),
-              () => console.log("playlists: ", this.state.playlists);
-          })
-          .catch(err => console.log("error getting playlists...", err));
       })
-      .catch(err => console.log("there was an error getting users...", err));
+      .catch(err => {
+        console.log("there was an error getting data...", err);
+      });
   }
 
   render() {
@@ -68,14 +64,17 @@ class SideBar extends Component {
       <Wrapper>
         {/* Related Tracks component  */}
         <div id="RelatedTracksView" style={divStyle.eachComponent}>
-          <RelatedTracksView />
+          <RelatedTracksView
+            tracks={this.state.tracks}
+            tracksLoading={this.state.tracksLoading}
+          />
         </div>
         {/* In PlayLists component  */}
         <div id="PlayListsView" style={divStyle.eachComponent}>
           <PlayListsView
             playlistsLoading={this.state.playlistsLoading}
             playlists={this.state.playlists}
-            user={this.state.users[0]}
+            user={this.state.users}
           />
         </div>
         {/* Users Liked component  */}

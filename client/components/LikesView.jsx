@@ -29,26 +29,6 @@ class LikesView extends Component {
     // console.log(e.target);
   }
 
-  // componentDidMount() {
-  //   this.getUsers();
-  // }
-
-  // getUsers() {
-  //   axios
-  //     .get("/api/users", {
-  //       // params: {}
-  //     })
-  //     .then(({ data }) => {
-  //       console.log(data);
-  //       this.setState({
-  //         users: data,
-  //         loading: false
-  //       }),
-  //         () => console.log("users: ", this.state.users);
-  //     })
-  //     .catch(err => console.log("error getting users...", err));
-  // }
-
   renderUsers() {
     if (this.props.usersLoading) {
       return (
